@@ -2137,6 +2137,10 @@ input, select, textarea {
 		font-size: 0.9em;
 	}
 
+	div.text-left {
+		text-align: left;
+	}
+
 /* Copyright */
 
 	#copyright {
