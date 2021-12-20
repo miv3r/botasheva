@@ -27,6 +27,8 @@
 				<h2>Пятидневный интенсив “Хороший родитель”</h2>
 				<h3>Как общаться с ребенком, чтобы не травмировать.</h3>
 				<h3 style="font-size: 1.3rem; padding-bottom: 10px">1 интенсив = 1 месяц психотерапии</h3>
+				<h3 style="font-size: 1.3rem; padding-bottom: 10px">Стоимость = <s>1200 р.</s> <span style="color: orange">900 р.</span></h3>
+
 				<div style="text-align: left; padding-left: 27%">
 					<h4>На интенсиве вы научитесь:</h4>
 					<ul>
@@ -47,6 +49,9 @@
 				<li><a href="#ta">Для кого</a></li>
 				<li><a href="#about">Обо мне</a></li>
 				<li><a href="#contact">Обратная связь</a></li>
+<!--				<li><a href="#success">Обратная связь</a></li>-->
+<!--				<li><a href="#contact_success">Обратная связь</a></li>-->
+
 				<!--								<li><a href="#elements">Elements</a></li>-->
 			</ul>
 		</nav>
@@ -79,31 +84,6 @@
 			<h2 class="major">Обо мне</h2>
 			<span class="image main"><img src="images/tania.jpg" alt="" /></span>
 			<p>Я психолог. Меня зовут Татьяна Боташева. Я специализируюсь на проблемах, связанных с зависимостями. Я работаю по двум методам: когнитивно-поведенческой терапии и методу универсальных трансформаций.</p>
-		</article>
-
-		<!-- Contact -->
-		<article id="contact">
-			<h2 class="major">Contact</h2>
-			<form method="post" action="#">
-				<div class="fields">
-					<div class="field half">
-						<label for="contact_name">Name</label>
-						<input type="text" name="name" id="contact_name" />
-					</div>
-					<div class="field half">
-						<label for="contact_email">Email</label>
-						<input type="text" name="email" id="contact_email" />
-					</div>
-					<div class="field">
-						<label for="contact_message">Message</label>
-						<textarea name="message" id="contact_message" rows="4"></textarea>
-					</div>
-				</div>
-				<ul class="actions">
-					<li><input type="submit" value="Send Message" class="primary" /></li>
-					<li><input type="reset" value="Reset" /></li>
-				</ul>
-			</form>
 			<ul class="icons">
 				<!--									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>-->
 				<!--									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>-->
@@ -112,10 +92,43 @@
 			</ul>
 		</article>
 
+		<!-- Contact -->
+		<article id="contact">
+			<h2 class="major">Обратная связь</h2>
+			<form method="post" action="https://n8n.botasheva.com/webhook-test/c6e67c2f-4a54-4209-853a-f11578f024fb">
+				<div class="fields">
+					<div class="field half">
+						<label for="contact_name">Имя</label>
+						<input type="text" name="name" id="contact_name" />
+					</div>
+					<div class="field half">
+						<label for="contact_email">Email</label>
+						<input type="text" name="email" id="contact_email" />
+					</div>
+					<div class="field">
+						<label for="contact_message">Сообщение</label>
+						<textarea name="message" id="contact_message" rows="4"></textarea>
+					</div>
+				</div>
+				<ul class="actions">
+					<div class="g-recaptcha" id="rcaptcha_contact"  data-sitekey="site key"></div>
+					<span id="captcha_contact" style="color:red" /></span> <!-- this will show captcha errors -->
+					<li><input type="submit" value="Отправить сообщение" class="primary" /></li>
+				</ul>
+			</form>
+<!--			<ul class="icons">-->
+<!--				&lt;!&ndash;									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>&ndash;&gt;-->
+<!--				&lt;!&ndash;									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>&ndash;&gt;-->
+<!--				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>-->
+<!--				&lt;!&ndash;									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>&ndash;&gt;-->
+<!--			</ul>-->
+		</article>
+
 		<!-- Request form -->
 		<article id="request">
 			<h2 class="major">Записаться на интенсив</h2>
-			<form method="post" action="#">
+			<p>Стоимость: 900 рублей</p>
+			<form method="post" action="https://n8n.botasheva.com/webhook-test/66dac431-62ee-4461-b42c-6adf4da34860">
 				<div class="fields">
 					<div class="field">
 						<label for="name">Имя</label>
@@ -123,18 +136,31 @@
 					</div>
 					<div class="field half">
 						<label for="email">Email</label>
-						<input type="text" name="email" id="email" />
+						<input type="email" name="email" id="email" required="required"/>
 					</div>
 					<div class="field half">
-						<label for="mobile">Телефон</label>
-						<input type="text" name="email" id="mobile" />
+						<label for="phone">Телефон</label>
+						<input type="tel" name="phone" id="phone" minlength="11" required="required"/>
 					</div>
 				</div>
 				<ul class="actions">
+					<div class="g-recaptcha" id="rcaptcha"  data-sitekey="site key"></div>
+					<span id="captcha" style="color:red" /></span> <!-- this will show captcha errors -->
 					<li><input type="submit" value="Записаться!" class="primary" /></li>
 				</ul>
 			</form>
 
+		</article>
+
+		<!-- Success -->
+		<article id="success">
+			<h2 class="major">Вы записаны!</h2>
+			<p>Поздравляем! Мы отправили вам на почту письмо с дальнешими шагами.</p>
+		</article>
+
+		<article id="contact_success">
+			<h2 class="major">Сообщение отправлено</h2>
+			<p>Спасибо! Мы свяжемся с вами в ближайшее время.</p>
 		</article>
 		<!-- Elements -->
 		<article id="elements">
@@ -396,6 +422,26 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+
+	function get_action(form)
+	{
+		var v = grecaptcha.getResponse();
+		if(v.length == 0)
+		{
+			document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
+			return false;
+		}
+		else
+		{
+			document.getElementById('captcha').innerHTML="Captcha completed";
+			return true;
+		}
+	}
+
+</script>
+
 
 </body>
 </html>
