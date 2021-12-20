@@ -6,7 +6,7 @@
 -->
 <html>
 <head>
-	<title>Dimension by HTML5 UP</title>
+	<title>Интенсив “Хороший родитель”</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -20,7 +20,7 @@
 	<!-- Header -->
 	<header id="header">
 		<div class="logo">
-			<span class="icon fa-brain"></span>
+			<span class="icon fa-gem"></span>
 		</div>
 		<div class="content">
 			<div class="inner">
@@ -111,8 +111,6 @@
 					</div>
 				</div>
 				<ul class="actions">
-					<div class="g-recaptcha" id="rcaptcha_contact"  data-sitekey="site key"></div>
-					<span id="captcha_contact" style="color:red" /></span> <!-- this will show captcha errors -->
 					<li><input type="submit" value="Отправить сообщение" class="primary" /></li>
 				</ul>
 			</form>
@@ -144,8 +142,6 @@
 					</div>
 				</div>
 				<ul class="actions">
-					<div class="g-recaptcha" id="rcaptcha"  data-sitekey="site key"></div>
-					<span id="captcha" style="color:red" /></span> <!-- this will show captcha errors -->
 					<li><input type="submit" value="Записаться!" class="primary" /></li>
 				</ul>
 			</form>
@@ -422,26 +418,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-<script src='https://www.google.com/recaptcha/api.js'></script>
-<script>
-
-	function get_action(form)
-	{
-		var v = grecaptcha.getResponse();
-		if(v.length == 0)
-		{
-			document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
-			return false;
-		}
-		else
-		{
-			document.getElementById('captcha').innerHTML="Captcha completed";
-			return true;
-		}
-	}
-
-</script>
-
 
 </body>
 </html>
